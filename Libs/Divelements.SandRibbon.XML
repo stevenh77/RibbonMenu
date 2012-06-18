@@ -1,0 +1,3581 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Divelements.SandRibbon</name>
+    </assembly>
+    <members>
+        <member name="T:Divelements.SandRibbon.Primitives.WindowTitle">
+            <summary>
+            Draws the title of a window, consisting of a window title and application title.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.WindowTitle.ApplicationNameProperty">
+            <summary>
+            Identifies the ApplicationName dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.WindowTitle.TitleProperty">
+            <summary>
+            Identifies the Title dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.WindowTitle.IsActiveProperty">
+            <summary>
+            Identifies the IsActive dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.WindowTitle.#ctor">
+            <summary>
+            Initializes a new instance of the WindowTitle class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.WindowTitle.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.WindowTitle.IsActive">
+            <summary>
+            Indicates whether the title is displayed active.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.WindowTitle.Title">
+            <summary>
+            The title of the window.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.WindowTitle.ApplicationName">
+            <summary>
+            The name of the application.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.KeyboardAccess">
+            <summary>
+            Provides facilities for keyboard access to ribbon controls.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.KeyboardAccess.KeysProperty">
+            <summary>
+            Identifies the Keys attached property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.KeyboardAccess.SetKeys(System.Windows.UIElement,System.String)">
+            <summary>
+            Sets the value of the Keys attached property for a given element.
+            </summary>
+            <param name="element">The element to set the property on.</param>
+            <param name="value">The new value of the property.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.KeyboardAccess.GetKeys(System.Windows.UIElement)">
+            <summary>
+            Obtains the value of the Keys attached property for a given element.
+            </summary>
+            <param name="element">The element to obtain the property value for.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="E:Divelements.SandRibbon.KeyboardAccess.KeyboardAccessStarting">
+            <summary>
+            Occurs when keyboard access is about to start.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.KeyboardAccess.Current">
+            <summary>
+            Obtains the keyboard access manager currently in use.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Separator">
+            <summary>
+            A visual separator for use in a ribbon group or menu.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Separator.#ctor">
+            <summary>
+            Initializes a new instance of the Separator class.
+            </summary>
+        </member>
+        <member name="T:Divelements.Licensing.SilverlightLicensing">
+            <summary>
+            Provides facilities for licensing Silverlight controls.
+            </summary>
+        </member>
+        <member name="M:Divelements.Licensing.SilverlightLicensing.ActivateProduct(System.String)">
+            <summary>
+            Activates the product with a customer-specific license key.
+            </summary>
+            <param name="licenseKey">The license key to use.</param>
+        </member>
+        <member name="P:Divelements.Licensing.SilverlightLicensing.IsActivated">
+            <summary>
+            Indicates whether the product has been activated.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Ribbon">
+            <summary>
+            Provides a ribbon view over tabs containing child controls.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.TypedItemsControl`1">
+            <summary>
+            Provides a level of type safety and hooks for an ItemsControl derivative.
+            </summary>
+            <typeparam name="T">The primary type of item to host.</typeparam>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TypedItemsControl`1.#ctor">
+            <summary>
+            Initializes a new instance of the TypedItemsControl class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TypedItemsControl`1.InsertAlternativeItem(System.Windows.UIElement)">
+            <summary>
+            Inserts an element of a type different from the standard hosted type.
+            </summary>
+            <param name="element">The element to insert.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TypedItemsControl`1.RemoveAlternativeItem(System.Windows.UIElement)">
+            <summary>
+            Removes and element of a type different from the standard hosted type.
+            </summary>
+            <param name="element">The element to remove.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TypedItemsControl`1.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TypedItemsControl`1.InsertItem(System.Int32,`0)">
+            <summary>
+            Performs the actions required to insert an item into the control.
+            </summary>
+            <param name="index">The index at which the item should be inserted.</param>
+            <param name="item">The item to insert.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TypedItemsControl`1.RemoveItem(System.Int32,`0)">
+            <summary>
+            Performs the actions required to remove an item from the control.
+            </summary>
+            <param name="index">The index of the item being removed.</param>
+            <param name="item">The item to remove.</param>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.TypedItemsControl`1.Children">
+            <summary>
+            A collection of children belonging to the control.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.TypedItemsControl`1.TypedCollectionForItemsControl`1">
+            <summary>
+            Provides collection facilities for a strongly-typed items control.
+            </summary>
+            <typeparam name="T">The type of item to store in the collection.</typeparam>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TypedItemsControl`1.TypedCollectionForItemsControl`1.InsertItem(System.Int32,`1)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TypedItemsControl`1.TypedCollectionForItemsControl`1.RemoveItem(System.Int32)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TypedItemsControl`1.TypedCollectionForItemsControl`1.ClearItems">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.IRibbonPopupHost">
+            <summary>
+            A contract for elements capable of displaying a ribbon popup to implement.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.IRibbonPopupHost.Popup">
+            <summary>
+            The popup associated with the element.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.IRibbonPopupHost.IsMouseOver">
+            <summary>
+            Indicates whether the mouse is over the element.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ICustomPopupPlacement">
+            <summary>
+            A contract for elements wishing to control placement of their popups to implement.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ICustomPopupPlacement.CalculatePlacementRect(Divelements.SandRibbon.RibbonPopup,System.Windows.UIElement,System.Windows.Size)">
+            <summary>
+            Calculates the placement rectangle of a popup.
+            </summary>
+            <param name="ribbonPopup">The popup being opened.</param>
+            <param name="screenElement">An element that represents the whole screen, used for transformation purposes.</param>
+            <param name="desiredSize">The desired size of the popup.</param>
+            <returns>A rectangle representing the final layout of the popup.</returns>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.IsMinimizedProperty">
+            <summary>
+            Identifies the IsMinimized dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.SelectedTabProperty">
+            <summary>
+            Identifies the SelectedTab dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.ControlAreaHeightProperty">
+            <summary>
+            Identifies the ControlAreaHeight dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.TabDividerBrushProperty">
+            <summary>
+            Identifies the TabDividerBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.ApplicationNameProperty">
+            <summary>
+            Identifies the ApplicationName dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.TitleProperty">
+            <summary>
+            Identifies the Title dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.MinimizedPopupTemplateProperty">
+            <summary>
+            Identifies the MinimizedPopupTemplate dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.ApplicationPopupProperty">
+            <summary>
+            Identifies the ApplicationPopup dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.ApplicationButtonImageProperty">
+            <summary>
+            Identifies the ApplicationButtonImage dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.ToolBarProperty">
+            <summary>
+            Identifies the ToolBar dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.ToolBarPositionProperty">
+            <summary>
+            Identifies the ToolBarPosition dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.ApplicationButtonColorProperty">
+            <summary>
+            Identifies the ApplicationButtonColor dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Ribbon.ApplicationButtonTextProperty">
+            <summary>
+            Identifies the ApplicationButtonText dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Ribbon.#ctor">
+            <summary>
+            Initializes a new instance of the Ribbon class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Ribbon.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Ribbon.OnLivePreview(Divelements.SandRibbon.LivePreviewEventArgs)">
+            <summary>
+            Raises the LivePreview event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Ribbon.OnHelpRequested(System.EventArgs)">
+            <summary>
+            Raises the HelpRequested event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Ribbon.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Overridden. See the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Ribbon.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>
+            Overridden. See the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Ribbon.ShowTab(Divelements.SandRibbon.RibbonTab,System.Boolean)">
+            <summary>
+            Shows the specified tab.
+            </summary>
+            <param name="tab">The tab to show.</param>
+            <param name="focus">Whether to set focus to the tab, when showing under a minimized ribbon.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Ribbon.InsertItem(System.Int32,Divelements.SandRibbon.RibbonTab)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Ribbon.RemoveItem(System.Int32,Divelements.SandRibbon.RibbonTab)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Ribbon.OnSelectedTabChanged(System.EventArgs)">
+            <summary>
+            Raises the SelectedTabChanged event.
+            </summary>
+            <param name="e">The arguments associated with the tab.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Ribbon.ToggleMinimize">
+            <summary>
+            Toggles the ribbon minimized state.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Ribbon.ActivateProduct(System.String)">
+            <summary>
+            Activates the product with a customer-specific license key.
+            </summary>
+            <param name="licenseKey">The license key to use.</param>
+        </member>
+        <member name="E:Divelements.SandRibbon.Ribbon.HelpRequested">
+            <summary>
+            Occurs when the user activates the help button.
+            </summary>
+        </member>
+        <member name="E:Divelements.SandRibbon.Ribbon.LivePreview">
+            <summary>
+            Occurs when live preview for a control should be activated.
+            </summary>
+        </member>
+        <member name="E:Divelements.SandRibbon.Ribbon.SelectedTabChanged">
+            <summary>
+            Occurs when the selected tab has changed;
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.EditingContexts">
+            <summary>
+            The editing contexts present in the ribbon.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.ToolBar">
+            <summary>
+            Gets or sets the toolbar associated with the ribbon.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.ToolBarPosition">
+            <summary>
+            Indicates where the toolbar is positioned relative to the ribbon.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.ApplicationButtonColor">
+            <summary>
+            Gets or sets the color of the application button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.ApplicationButtonText">
+            <summary>
+            Gets or sets the text in the application button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.ApplicationButtonImage">
+            <summary>
+            The image to show in the application button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.ApplicationPopup">
+            <summary>
+            The popup to show beneath the application button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.ShowHelp">
+            <summary>
+            Determines whether the help button is visible.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.MinimizedPopupTemplate">
+            <summary>
+            The template to use for displaying tabs while in the minimized state.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.ApplicationName">
+            <summary>
+            The name of the application.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.Title">
+            <summary>
+            The title of the window.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.TabDividerBrush">
+            <summary>
+            The brush with which to draw dividers between tabs.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.ControlAreaHeight">
+            <summary>
+            Indicates the height of the control display area.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.SelectedTab">
+            <summary>
+            The tab that is currently being displayed in the control.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.IsMinimized">
+            <summary>
+            Indicates whether the ribbon is minimized.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.Tabs">
+            <summary>
+            The tabs belonging to the ribbon.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Ribbon.ApplicationButton">
+            <summary>
+            The application button hosted on the ribbon.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.ApplicationButton">
+            <summary>
+            A special kind of button designed to represent the application as a whole.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Button">
+            <summary>
+            Provides a clickable means to activate commands.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.RibbonControl">
+            <summary>
+            Provides base functionality for other ribbon controls.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonControl.CommandProperty">
+            <summary>
+            Identifies the Command dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonControl.CommandParameterProperty">
+            <summary>
+            Identifies the CommandParameter dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonControl.#ctor">
+            <summary>
+            Initializes a new instance of the RibbonControl class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonControl.OnActivate(Divelements.SandRibbon.ActivateEventArgs)">
+            <summary>
+            Raises the Activate event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="E:Divelements.SandRibbon.RibbonControl.Activate">
+            <summary>
+            Occurs when the button is activated with the mouse or the keyboard.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonControl.CommandParameter">
+            <summary>
+            Gets or sets the parameter to pass to the Command property.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonControl.Command">
+            <summary>
+            The command associated with the control.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.IVariantAwareControl">
+            <summary>
+            A contract implemented by controls whose size can change dynamically.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.IVariantAwareControl.SetAmbientVariant(Divelements.SandRibbon.RibbonGroupVariant)">
+            <summary>
+            Sets the variant active within the control.
+            </summary>
+            <param name="variant">The size variant to use.</param>
+        </member>
+        <member name="F:Divelements.SandRibbon.Button.IsCheckedProperty">
+            <summary>
+            Identifies the IsChecked dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Button.LargeImageProperty">
+            <summary>
+            Identifies the LargeImage dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Button.SmallImageProperty">
+            <summary>
+            Identifies the SmallImage dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Button.SizeProperty">
+            <summary>
+            Identifies the Size dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Button.CollapseToMediumProperty">
+            <summary>
+            Identifies the CollapseToMedium dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Button.CollapseToSmallProperty">
+            <summary>
+            Identifies the CollapseToSmall dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Button.TextProperty">
+            <summary>
+            Identifies the Text dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Button.DisplayTextProperty">
+            <summary>
+            Identifies the DisplayText dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Button.DisplayText2Property">
+            <summary>
+            Identifies the DisplayText2 dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Button.IsSplitProperty">
+            <summary>
+            Identifies the IsSplit dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.Button"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.OnCreateAutomationPeer">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.OnActivate(Divelements.SandRibbon.ActivateEventArgs)">
+            <summary>
+            Raises the Activate event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.LaunchPopup(Divelements.SandRibbon.LaunchPopupFocusAction)">
+            <summary>
+            Launches the popup associated with the button.
+            </summary>
+            <param name="focusAction">The focus action to apply when the popup is launched.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.OnContentChanged(System.Object,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.TriggerLivePreview">
+            <summary>
+            Triggers live preview for the control.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Button.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.IsSplit">
+            <summary>
+            Indicates whether the button is divided into two split, clickable portions.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.Popup">
+            <summary>
+            The popup associated with the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.AutoCheck">
+            <summary>
+            Specifies whether the button is automatically checked when activated.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.Text">
+            <summary>
+            The text to display in the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.DisplayText">
+            <summary>
+            The text actually showing in the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.DisplayText2">
+            <summary>
+            The text actually showing in the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.Size">
+            <summary>
+            The size the button will adopt unless size constraints are in place.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.CollapseToMedium">
+            <summary>
+            Indicates the group variant threshold at which the button will collapse to its medium size.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.CollapseToSmall">
+            <summary>
+            Indicates the group variant threshold at which the button will collapse to its small size.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.LargeImage">
+            <summary>
+            The image to use when a large image is required.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.ShowDropDown">
+            <summary>
+            Determines whether a dropdown indicator is shown when there is a popup associated with the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.AutoSize">
+            <summary>
+            Determines whether the button adopts a fixed size for its image.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.SmallImage">
+            <summary>
+            The image to use when a small image is required.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.IsChecked">
+            <summary>
+            Indicates whether the button is checked.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Button.IsMouseOver">
+            <summary>
+            Indicates whether the mouse is hovering over the element.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.ApplicationButton.#ctor">
+            <summary>
+            Initializes a new instance of the ApplicationButton class.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Menu">
+            <summary>
+            Provides a container for menu items.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Menu.SeparatorStyleProperty">
+            <summary>
+            Identifies the SeparatorStyle dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Menu.#ctor">
+            <summary>
+            Initializes a new instance of the Menu class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Menu.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Menu.GetContainerForItemOverride">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Menu.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Menu.SeparatorStyle">
+            <summary>
+            The style to apply to separators.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ComboBoxItem">
+            <summary>
+            An item designed to be hosted in a <see cref="T:Divelements.SandRibbon.ComboBox"/>.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ComboBoxItem.ImageProperty">
+            <summary>
+            Identifies the Image dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ComboBoxItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.ComboBoxItem"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ComboBoxItem.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ComboBoxItem.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ComboBoxItem.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ComboBoxItem.Image">
+            <summary>
+            The image associated with the group.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ColorEventArgs">
+            <summary>
+            Arguments for an event dealing with a color.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ColorEventArgs.Color">
+            <summary>
+            The color associated with the event.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.BeforeOpenEventArgs">
+            <summary>
+            Arguments for an event dealing with a popup about to open.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.BeforeOpenEventArgs.Cancel">
+            <summary>
+            Whether the action should be cancelled.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.BeforeOpenEventArgs.Popup">
+            <summary>
+            The popup associated with the event.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.BeforeOpenEventArgs.Element">
+            <summary>
+            The element on which the popup is opening.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ActivateEventArgs">
+            <summary>
+            Arguments describing the means in which an item is being activated.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ActivateEventArgs.ActivationMethod">
+            <summary>
+            The method by which the item is being activated.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.FileButton">
+            <summary>
+            Provides highlighting functionality for a file button.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.FileButton.ColorProperty">
+            <summary>
+            Identifies the Color dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.FileButton.DarkColorProperty">
+            <summary>
+            Identifies the DarkColor dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.FileButton.LightColorProperty">
+            <summary>
+            Identifies the LightColor dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.FileButton.#ctor">
+            <summary>
+            Initializes a new instance of the FileButtonChrome class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.FileButton.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.FileButton.Color">
+            <summary>
+            The color with which to draw the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.FileButton.DarkColor">
+            <summary>
+            The color with which to draw dark parts of the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.FileButton.LightColor">
+            <summary>
+            The color with which to draw light parts of the button.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.Highlighter">
+            <summary>
+            Provides switchable highlight facilities for other controls.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.CornerRadiusProperty">
+            <summary>
+            Identifies the CornerRadius dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.InnerCornerRadiusProperty">
+            <summary>
+            Identifies the InnerCornerRadius dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.HotBackgroundBrushProperty">
+            <summary>
+            Identifies the HotBackgroundBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.HotOuterBorderBrushProperty">
+            <summary>
+            Identifies the HotOuterBorderBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.HotInnerBorderBrushProperty">
+            <summary>
+            Identifies the HotInnerBorderBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.PushedBackgroundBrushProperty">
+            <summary>
+            Identifies the PushedBackgroundBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.PushedOuterBorderBrushProperty">
+            <summary>
+            Identifies the PushedOuterBorderBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.PushedInnerBorderBrushProperty">
+            <summary>
+            Identifies the PushedInnerBorderBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.CheckedBackgroundBrushProperty">
+            <summary>
+            Identifies the CheckedBackgroundBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.CheckedOuterBorderBrushProperty">
+            <summary>
+            Identifies the CheckedOuterBorderBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.CheckedInnerBorderBrushProperty">
+            <summary>
+            Identifies the CheckedInnerBorderBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.EffectiveBackgroundBrushProperty">
+            <summary>
+            Identifies the EffectiveBackgroundBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.EffectiveOuterBorderBrushProperty">
+            <summary>
+            Identifies the EffectiveOuterBorderBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.EffectiveInnerBorderBrushProperty">
+            <summary>
+            Identifies the EffectiveInnerBorderBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Highlighter.InteractionStateProperty">
+            <summary>
+            Identifies the InteractionState dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.Highlighter.#ctor">
+            <summary>
+            Initializes a new instance of the Highlighter class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.Highlighter.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.InteractionState">
+            <summary>
+            The interaction state of the highlight.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.HotBackgroundBrush">
+            <summary>
+            The brush used to draw the background when hot.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.HotOuterBorderBrush">
+            <summary>
+            The brush used to draw the outer border when hot.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.HotInnerBorderBrush">
+            <summary>
+            The brush used to draw the inner border when hot.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.PushedBackgroundBrush">
+            <summary>
+            The brush used to draw the background when Pushed.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.PushedOuterBorderBrush">
+            <summary>
+            The brush used to draw the outer border when Pushed.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.PushedInnerBorderBrush">
+            <summary>
+            The brush used to draw the inner border when Pushed.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.CheckedBackgroundBrush">
+            <summary>
+            The brush used to draw the background when Checked.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.CheckedOuterBorderBrush">
+            <summary>
+            The brush used to draw the outer border when Checked.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.CheckedInnerBorderBrush">
+            <summary>
+            The brush used to draw the inner border when Checked.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.EffectiveBackgroundBrush">
+            <summary>
+            The brush used to draw the background when Effective.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.EffectiveOuterBorderBrush">
+            <summary>
+            The brush used to draw the outer border when Effective.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.EffectiveInnerBorderBrush">
+            <summary>
+            The brush used to draw the inner border when Effective.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.CornerRadius">
+            <summary>
+            The radius of the corners drawn on the background.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Highlighter.InnerCornerRadius">
+            <summary>
+            The radius of the inner corners drawn on the background.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.LivePreviewEventArgs">
+            <summary>
+            Arguments representing an event concerning showing a live preview for a selection.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.LivePreviewEventArgs.Control">
+            <summary>
+            The control being previewed.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.LivePreviewEventArgs.Parameter">
+            <summary>
+            The parameter associated with the request for live preview.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.LivePreviewEventArgs.PreviewObject">
+            <summary>
+            An object representing the preview that can be cancelled in a timely fashion.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ILivePreview">
+            <summary>
+            A contract for an object representing a live preview to implement.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ILivePreview.ActivatePreview">
+            <summary>
+            Activates the preview.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ILivePreview.RemovePreview">
+            <summary>
+            Removes the preview by reversing the action applied previously in the ActivatePreview method.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ScreenTip">
+            <summary>
+            Provides advanced tooltip functionality.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ScreenTip.TextProperty">
+            <summary>
+            Identifies the Text attached dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ScreenTip.DescriptionProperty">
+            <summary>
+            Identifies the Description attached dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ScreenTip.ImageProperty">
+            <summary>
+            Identifies the Image attached dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ScreenTip.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.ScreenTip"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ScreenTip.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ScreenTip.SetText(System.Windows.UIElement,System.String)">
+            <summary>
+            Sets the value of the Text attached property for a given element.
+            </summary>
+            <param name="element">The element to set the property on.</param>
+            <param name="value">The new value of the property.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.ScreenTip.GetText(System.Windows.UIElement)">
+            <summary>
+            Obtains the value of the Text attached property for a given element.
+            </summary>
+            <param name="element">The element to obtain the property value for.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.ScreenTip.SetDescription(System.Windows.UIElement,System.String)">
+            <summary>
+            Sets the value of the Description attached property for a given element.
+            </summary>
+            <param name="element">The element to set the property on.</param>
+            <param name="value">The new value of the property.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.ScreenTip.GetDescription(System.Windows.UIElement)">
+            <summary>
+            Obtains the value of the Description attached property for a given element.
+            </summary>
+            <param name="element">The element to obtain the property value for.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.ScreenTip.SetImage(System.Windows.UIElement,System.Windows.Media.ImageSource)">
+            <summary>
+            Sets the value of the Image attached property for a given element.
+            </summary>
+            <param name="element">The element to set the property on.</param>
+            <param name="value">The new value of the property.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.ScreenTip.GetImage(System.Windows.UIElement)">
+            <summary>
+            Obtains the value of the Image attached property for a given element.
+            </summary>
+            <param name="element">The element to obtain the property value for.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="P:Divelements.SandRibbon.ScreenTip.Text">
+            <summary>
+            The text associated with the screen tip.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ScreenTip.Description">
+            <summary>
+            The description associated with the screen tip.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ScreenTip.Image">
+            <summary>
+            The image associated with the screen tip.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.StripPanel">
+            <summary>
+            Provides the facility to lay out child items in a strip, with separators.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.StripPanel.OrientationProperty">
+            <summary>
+            Identifies the Orientation dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.StripPanel.ItemSpacingProperty">
+            <summary>
+            Identifies the ItemSpacing dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.StripPanel.StretchProperty">
+            <summary>
+            Identifies the Stretch dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.StripPanel.#ctor">
+            <summary>
+            Initializes a new instance of the StripPanel class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.StripPanel.BeginsNewGroup(System.Windows.UIElement,System.Windows.UIElement)">
+            <summary>
+            Indicates whether an item begins a new group.
+            </summary>
+            <param name="item">The item that might begin a new group.</param>
+            <param name="previousItem">The previous item.</param>
+            <returns>A boolean value indicating whether a new group should be started.</returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.StripPanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.StripPanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.StripPanel.GetStretch(System.Windows.UIElement)">
+            <summary>
+            Obtains the value of the Stretch attached property for a given element.
+            </summary>
+            <param name="element">The element to obtain the property value for.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.StripPanel.SetStretch(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Sets the value of the Stretch attached property for a given element.
+            </summary>
+            <param name="element">The element to set the property on.</param>
+            <param name="value">The new value of the property.</param>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.StripPanel.Orientation">
+            <summary>
+            The direction in which items are laid out.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.StripPanel.ItemSpacing">
+            <summary>
+            The spacing to apply between items.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.CollapsiblePanel">
+            <summary>
+            Provides layout facilities for a group of items that can be aligned horizontally or vertically if there is room.
+            </summary>
+            <remarks>
+            <para>Use this class together with controls that change their size so that they are laid out vertically when small and horizontally when large.</para>
+            </remarks>
+        </member>
+        <member name="M:Divelements.SandRibbon.CollapsiblePanel.#ctor">
+            <summary>
+            Initializes a new instance of the CollapsiblePanel class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.CollapsiblePanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.CollapsiblePanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.TabStripTab">
+            <summary>
+            Represents a clickable tab for display in a tabstrip.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.TabStripTab.RibbonTabProperty">
+            <summary>
+            Identifies the RibbonTab dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.TabStripTab.TextProperty">
+            <summary>
+            Identifies the Text dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.TabStripTab.IsSelectedProperty">
+            <summary>
+            Identifies the IsSelected dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.TabStripTab.ContextualAppearanceProperty">
+            <summary>
+            Identifies the ContextualAppearance dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TabStripTab.#ctor">
+            <summary>
+            Initializes a new instance of the TabStripTab class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TabStripTab.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TabStripTab.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TabStripTab.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TabStripTab.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TabStripTab.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TabStripTab.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.TabStripTab.IsSelected">
+            <summary>
+            Indicates whether the tab should display in a selected state.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.TabStripTab.Text">
+            <summary>
+            The text to display in the tab.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.TabStripTab.RibbonTab">
+            <summary>
+            Indicates the RibbonTab instance to which this tab is bound.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.TabStripTab.ContextualAppearance">
+            <summary>
+            How the tab colours itself when contextual.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.ThemingStyle">
+            <summary>
+            Specifies a theme style to apply.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.ThemingStyle.Office2007">
+            <summary>
+            The whole tab is coloured with the editing context colour.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.ThemingStyle.Office2010">
+            <summary>
+            Only the border of the tab is coloured with the editing context colour.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.DividerPanel">
+            <summary>
+            Lays out child controls in a strip with dividers in between.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.DividerPanel.DividerDarkBrushProperty">
+            <summary>
+            Identifies the DividerDarkBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.DividerPanel.DividerLightBrushProperty">
+            <summary>
+            Identifies the DividerLightBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.DividerPanel.DividerSizeProperty">
+            <summary>
+            Identifies the DividerSize dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.DividerPanel.#ctor">
+            <summary>
+            Initializes a new instance of the DividerPanel class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.DividerPanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.DividerPanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.DividerPanel.AddElement(System.Int32,System.Windows.UIElement)">
+            <summary>
+            Adds an element to the panel.
+            </summary>
+            <param name="index">The index at which to add the element.</param>
+            <param name="item">The element to add.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.DividerPanel.RemoveElement(System.Windows.UIElement)">
+            <summary>
+            Removes an element from the panel.
+            </summary>
+            <param name="item">The element to remove.</param>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.DividerPanel.DividerSize">
+            <summary>
+            The size of the dividers shown.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.DividerPanel.DividerDarkBrush">
+            <summary>
+            The brush with which to draw the dark side of dividers.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.DividerPanel.DividerLightBrush">
+            <summary>
+            The brush with which to draw the light side of dividers.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ApplicationPopup">
+            <summary>
+            A popup designed to be hosted by the application button.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.RibbonPopup">
+            <summary>
+            Provides popup facilities.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonPopup.SeparatorStyleProperty">
+            <summary>
+            Identifies the SeparatorStyle dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonPopup.ShouldDismissPopupProperty">
+            <summary>
+            Identifies the ShouldDismissPopup dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonPopup.ResizeModeProperty">
+            <summary>
+            Identifies the ResizeMode dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.#ctor">
+            <summary>
+            Initializes a new instance of the RibbonPopup class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.OnBeforeOpen(Divelements.SandRibbon.BeforeOpenEventArgs)">
+            <summary>
+            Raises the BeforeOpen event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.OnOpened(System.EventArgs)">
+            <summary>
+            Raise the Opened event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.OnClosed(System.EventArgs)">
+            <summary>
+            Raises the Closed event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.CanShow">
+            <summary>
+            Determines whether the popup can be shown.
+            </summary>
+            <returns>A boolean value indicating whether the popup can be shown.</returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.CollapseAll">
+            <summary>
+            Collapses any and all open popups.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.SetShouldDismissPopup(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Sets the value of the ShouldDismissPopup property for the specified element.
+            </summary>
+            <param name="element">The element for which to set the property value.</param>
+            <param name="value">The new value of the property.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonPopup.GetShouldDismissPopup(System.Windows.UIElement)">
+            <summary>
+            Obtains the value of the ShouldDismissPopup property for the specified element.
+            </summary>
+            <param name="element">The element for which to obtain the property value.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="E:Divelements.SandRibbon.RibbonPopup.Opened">
+            <summary>
+            Occurs when the popup is opened.
+            </summary>
+        </member>
+        <member name="E:Divelements.SandRibbon.RibbonPopup.Closed">
+            <summary>
+            Occurs when the popup is closed.
+            </summary>
+        </member>
+        <member name="E:Divelements.SandRibbon.RibbonPopup.BeforeOpen">
+            <summary>
+            Occurs when the popup is about to be opened.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonPopup.ResizeMode">
+            <summary>
+            Indicates how a gallery within the popup can be resized.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonPopup.SeparatorStyle">
+            <summary>
+            The style to apply to separators.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonPopup.IsOpen">
+            <summary>
+            Indicates whether the popup is open.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonPopup.Launcher">
+            <summary>
+            The element that launched the popup.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ApplicationPopup.ContentProperty">
+            <summary>
+            Identifies the Content dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ApplicationPopup.#ctor">
+            <summary>
+            Initializes a new instance of the ApplicationPopup class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ApplicationPopup.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ApplicationPopup.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ApplicationPopup.Content">
+            <summary>
+            The content to display within the popup.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ToolBarTray">
+            <summary>
+            Provides layout and management facilities for toolbars.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ToolBarTray.LineProperty">
+            <summary>
+            Identifies the Line attached dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ToolBarTray.OffsetProperty">
+            <summary>
+            Identifies the Offset attached dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBarTray.#ctor">
+            <summary>
+            Initializes a new instance of the ToolBarTray class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBarTray.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBarTray.ClearContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBarTray.SetLine(Divelements.SandRibbon.ToolBar,System.Int32)">
+            <summary>
+            Sets the value of the Line attached property for a given element.
+            </summary>
+            <param name="element">The element to set the property on.</param>
+            <param name="value">The new value of the property.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBarTray.GetLine(Divelements.SandRibbon.ToolBar)">
+            <summary>
+            Obtains the value of the Line attached property for a given element.
+            </summary>
+            <param name="element">The element to obtain the property value for.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBarTray.SetOffset(Divelements.SandRibbon.ToolBar,System.Double)">
+            <summary>
+            Sets the value of the Offset attached property for a given element.
+            </summary>
+            <param name="element">The element to set the property on.</param>
+            <param name="value">The new value of the property.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBarTray.GetOffset(Divelements.SandRibbon.ToolBar)">
+            <summary>
+            Obtains the value of the Line attached property for a given element.
+            </summary>
+            <param name="element">The element to obtain the property value for.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="T:Divelements.SandRibbon.EditingContextActivateMode">
+            <summary>
+            Specifies how an editing context is activated.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.EditingContextActivateMode.ShowTabs">
+            <summary>
+            The tabs belonging to the editing context are shown.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.EditingContextActivateMode.ShowTabsAndSelect">
+            <summary>
+            The tabs belonging to the editing context are shown and the first tab is selected.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.GalleryResizeMode">
+            <summary>
+            Specifies how a gallery can be resized.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.GalleryResizeMode.None">
+            <summary>
+            The gallery cannot be resized.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.GalleryResizeMode.Vertical">
+            <summary>
+            The gallery can be resized vertically.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.GalleryResizeMode.HorizontalAndVertical">
+            <summary>
+            The gallery can be resized horizontally and vertically.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ToolBarPosition">
+            <summary>
+            Specifies where a toolbar is positioned.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ToolBarPosition.AboveRibbon">
+            <summary>
+            The toolbar is positioned above the ribbon.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ToolBarPosition.BelowRibbon">
+            <summary>
+            The toolbar is positioned below the ribbon.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.RibbonGroupVariant">
+            <summary>
+            Specifies a size-based variant of a ribbon group.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGroupVariant.Large">
+            <summary>
+            The group is displayed in its large state.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGroupVariant.Medium">
+            <summary>
+            The group is displayed in its medium state.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGroupVariant.Small">
+            <summary>
+            The group is displayed in its small state.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGroupVariant.Collapsed">
+            <summary>
+            The group is displayed collapsed.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ButtonSize">
+            <summary>
+            Specifies a standard size for a ribbon button.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ButtonSize.Small">
+            <summary>
+            Only the icon for the button is shown, small.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ButtonSize.Medium">
+            <summary>
+            The icon for the button is shown small, with its text alongside.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ButtonSize.Large">
+            <summary>
+            The icon for the button is shown large, with its text underneath.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.CollapseThreshold">
+            <summary>
+            Specifies the threshold for when a control will collapse to a given size.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.CollapseThreshold.Never">
+            <summary>
+            The control will never collapse.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.CollapseThreshold.WhenGroupIsMedium">
+            <summary>
+            The control will collapse when the group variant is medium or small.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.CollapseThreshold.WhenGroupIsSmall">
+            <summary>
+            The control will collapse when the group variant is small.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ActivationMethod">
+            <summary>
+            Specifies a means of activating a control.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ActivationMethod.Mouse">
+            <summary>
+            The control was activated with the mouse.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ActivationMethod.Keyboard">
+            <summary>
+            The control was activated with the keyboard.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.AutoCheckMode">
+            <summary>
+            Specifies how an item can be automatically checked.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.AutoCheckMode.None">
+            <summary>
+            The item is not automatically checked.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.AutoCheckMode.Toggle">
+            <summary>
+            The checked state of the item is automatically toggled.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.AutoCheckMode.Radio">
+            <summary>
+            The item is automatically checked and others in the same parent are unchecked.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.LaunchPopupFocusAction">
+            <summary>
+            Specifies the focus behavior when a popup is launched.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.LaunchPopupFocusAction.FocusPopup">
+            <summary>
+            The popup itself is focused.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.LaunchPopupFocusAction.FocusFirstItem">
+            <summary>
+            The first item in the popup is focused.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.RibbonGallery">
+            <summary>
+            A gallery designed for hosting directly within a ribbon group.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Gallery">
+            <summary>
+            Provides a scrollable viewport on to a list of gallery buttons.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Gallery.ViewportWidthProperty">
+            <summary>
+            Identifies the ViewportWidth dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Gallery.ViewportHeightProperty">
+            <summary>
+            Identifies the ViewportHeight dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Gallery.ItemWidthProperty">
+            <summary>
+            Identifies the ItemWidth dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Gallery.ItemHeightProperty">
+            <summary>
+            Identifies the ItemHeight dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Gallery.MinimumViewportWidthProperty">
+            <summary>
+            Identifies the MinimumViewportWidth dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Gallery.MinimumViewportHeightProperty">
+            <summary>
+            Identifies the MinimumViewportHeight dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Gallery.MaximumViewportWidthProperty">
+            <summary>
+            Identifies the MaximumViewportWidth dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Gallery.MaximumViewportHeightProperty">
+            <summary>
+            Identifies the MaximumViewportHeight dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Gallery.#ctor">
+            <summary>
+            Initializes a new instance of the Gallery class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Gallery.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Gallery.GetContainerForItemOverride">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Gallery.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Gallery.MinimumViewportWidth">
+            <summary>
+            Indicates the minimum acceptable width to which the user can resize the viewport.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Gallery.MinimumViewportHeight">
+            <summary>
+            Indicates the minimum acceptable height to which the user can resize the viewport.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Gallery.MaximumViewportWidth">
+            <summary>
+            Indicates the maximum acceptable width to which the user can resize the viewport.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Gallery.MaximumViewportHeight">
+            <summary>
+            Indicates the maximum acceptable height to which the user can resize the viewport.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Gallery.ItemWidth">
+            <summary>
+            Indicates the consistent width of each item.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Gallery.ItemHeight">
+            <summary>
+            Indicates the consistent height of each item.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Gallery.ViewportWidth">
+            <summary>
+            Indicates the width of the scrollable viewport within the gallery.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Gallery.ViewportHeight">
+            <summary>
+            Indicates the height of the scrollable viewport within the gallery.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGallery.CondenseProperty">
+            <summary>
+            Identifies the Condense dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGallery.IsCondensedProperty">
+            <summary>
+            Identifies the IsCondensed dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGallery.ImageProperty">
+            <summary>
+            Identifies the Image dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGallery.TextProperty">
+            <summary>
+            Identifies the Text dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGallery.PopupViewportWidthProperty">
+            <summary>
+            Identifies the PopupViewportWidth dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGallery.PopupViewportHeightProperty">
+            <summary>
+            Identifies the PopupViewportHeight dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGallery.PopupItemsProperty">
+            <summary>
+            Identifies the PopupItems dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGallery.ResizeModeProperty">
+            <summary>
+            Identifies the ResizeMode dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonGallery.#ctor">
+            <summary>
+            Initializes a new instance of the RibbonGallery class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonGallery.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonGallery.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGallery.ResizeMode">
+            <summary>
+            Indicates how a gallery within the popup can be resized.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGallery.PopupItems">
+            <summary>
+            The items to display in the popup portion of the control.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGallery.Text">
+            <summary>
+            The text associated with the gallery.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGallery.Image">
+            <summary>
+            The image associated with the group.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGallery.IsCondensed">
+            <summary>
+            Indicates whether the panel is condensed.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGallery.Condense">
+            <summary>
+            Indicates the threshold at which the panel becomes condensed.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGallery.PopupViewportWidth">
+            <summary>
+            The width of the popup gallery viewport.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGallery.PopupViewportHeight">
+            <summary>
+            The height of the popup gallery viewport.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ButtonGroup">
+            <summary>
+            Represents a group of buttons with similar functionality.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ButtonGroup.RemoveButtonBordersProperty">
+            <summary>
+            Identifies the RemoveButtonBorders dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ButtonGroup.ButtonPaddingProperty">
+            <summary>
+            Identifies the ButtonPadding dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ButtonGroup.#ctor">
+            <summary>
+            Initializes a new instance of the ButtonGroup class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ButtonGroup.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ButtonGroup.InsertItem(System.Int32,Divelements.SandRibbon.Button)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ButtonGroup.RemoveItem(System.Int32,Divelements.SandRibbon.Button)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ButtonGroup.ButtonPadding">
+            <summary>
+            The amount of padding to apply to child buttons.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ButtonGroup.Buttons">
+            <summary>
+            The buttons belonging to the group.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ButtonGroup.RemoveButtonBorders">
+            <summary>
+            Indicates whether borders on button controls are removed.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.ToolBarTrayPanel">
+            <summary>
+            Provides layout facilities for toolbars within a <see cref="T:Divelements.SandRibbon.ToolBarTray"/>.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.ToolBarTrayPanel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.Primitives.ToolBarTrayPanel"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.ToolBarTrayPanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.ToolBarTrayPanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.ToolBarPanel">
+            <summary>
+            Provides the facility to relocate any items which do not fit into the primary container into another panel.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.ToolBarPanel.IsRelocatedProperty">
+            <summary>
+            Identifies the IsRelocated dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.ToolBarPanel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.Primitives.ToolBarPanel"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.ToolBarPanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.ToolBarPanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.ToolBarPanel.SetIsRelocated(System.Windows.UIElement,System.Boolean)">
+            <summary>
+            Sets the value of the IsRelocated attached property for a given element.
+            </summary>
+            <param name="element">The element to set the property on.</param>
+            <param name="value">The new value of the property.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.ToolBarPanel.GetIsRelocated(System.Windows.UIElement)">
+            <summary>
+            Obtains the value of the IsRelocated attached property for a given element.
+            </summary>
+            <param name="element">The element to obtain the property value for.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.Splitter">
+            <summary>
+            Represents a control that can be dragged by the user.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.Splitter.IsDraggingProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.Primitives.Thumb.IsDragging" /> dependency property.
+            </summary>
+            <returns>
+            The identifier for the <see cref="P:System.Windows.Controls.Primitives.Thumb.IsDragging" /> dependency property.
+            </returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.Splitter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.Primitives.Thumb" /> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.Splitter.CancelDrag">
+            <summary>
+            Cancels a drag operation for the <see cref="T:System.Windows.Controls.Primitives.Thumb" />.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.Splitter.OnApplyTemplate">
+            <summary>
+            Builds the visual tree for the <see cref="T:System.Windows.Controls.Primitives.Thumb" /> control when a new template is applied.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.Splitter.OnBeforeDrag(System.EventArgs)">
+            <summary>
+            Raises the BeforeDrag event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.Splitter.OnDoubleClick(System.EventArgs)">
+            <summary>
+            Raises the DoubleClick event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.Splitter.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.Splitter.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.Splitter.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.Splitter.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.Splitter.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="E:Divelements.SandRibbon.Primitives.Splitter.DragCompleted">
+            <summary>
+            Occurs when the <see cref="T:System.Windows.Controls.Primitives.Thumb" /> control loses mouse capture.
+            </summary>
+        </member>
+        <member name="E:Divelements.SandRibbon.Primitives.Splitter.DragDelta">
+            <summary>
+            Occurs one or more times as the mouse pointer is moved when a <see cref="T:System.Windows.Controls.Primitives.Thumb" /> control has logical focus and mouse capture. 
+            </summary>
+        </member>
+        <member name="E:Divelements.SandRibbon.Primitives.Splitter.DragStarted">
+            <summary>
+            Occurs when a <see cref="T:System.Windows.Controls.Primitives.Thumb" /> control receives logical focus and mouse capture.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.Splitter.IsDragging">
+            <summary>
+            Gets whether the <see cref="T:System.Windows.Controls.Primitives.Thumb" /> control has focus and mouse capture.
+            </summary>
+            <returns>true if the <see cref="T:System.Windows.Controls.Primitives.Thumb" /> control has focus and mouse capture; otherwise false. The default is false.
+            </returns>
+        </member>
+        <member name="T:Divelements.SandRibbon.GroupVariant">
+            <summary>
+            Represents a size variant of a ribbon group.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.GroupVariant.#ctor">
+            <summary>
+            Initializes a new instance of the GroupVariant class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.GroupVariant.#ctor(Divelements.SandRibbon.RibbonGroup,Divelements.SandRibbon.RibbonGroupVariant,System.Int32)">
+            <summary>
+            Initializes a new instance of the GroupVariant class.
+            </summary>
+            <param name="group">The initial value of the Group property.</param>
+            <param name="variant">The initial value of the Variant property.</param>
+            <param name="priority">The initial value of the Priority property.</param>
+        </member>
+        <member name="P:Divelements.SandRibbon.GroupVariant.Priority">
+            <summary>
+            The priority with which to apply the variant.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.GroupVariant.Group">
+            <summary>
+            The group to which the variant will be applied.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.GroupVariant.Variant">
+            <summary>
+            The variant which will be applied.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.GroupVariantCollection">
+            <summary>
+            A collection of group variants.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.GroupVariantCollection.#ctor(Divelements.SandRibbon.RibbonGroup)">
+            <summary>
+            Initializes a new instance of the GroupVariantCollection class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.GroupVariantCollection.ClearItems">
+            <summary>
+            Overridden. See the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.GroupVariantCollection.InsertItem(System.Int32,Divelements.SandRibbon.GroupVariant)">
+            <summary>
+            Overridden. See the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.GroupVariantCollection.RemoveItem(System.Int32)">
+            <summary>
+            Overridden. See the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ComboBox">
+            <summary>
+            An enhanced combo box designed for hosting within a ribbon.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ComboBox.#ctor">
+            <summary>
+            Initializes a new instance of the RibbonComboBox class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ComboBox.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ComboBox.OnDropDownOpened(System.EventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ComboBox.OnDropDownClosed(System.EventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ComboBox.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ComboBox.GetContainerForItemOverride">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ToolBar">
+            <summary>
+            Provides quick access to a collection of buttons or other items.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ToolBar.SeparatorStyleProperty">
+            <summary>
+            Identifies the SeparatorStyle dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.ToolBar"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBar.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBar.InsertItem(System.Int32,System.Windows.UIElement)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBar.RemoveItem(System.Int32,System.Windows.UIElement)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBar.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ToolBar.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ToolBar.ShowChevron">
+            <summary>
+            Indicates whether a chevron is displayed at the end of the toolbar.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ToolBar.ShowGripper">
+            <summary>
+            Indicates whether a gripper is displayed when the toolbar is hosted in a tray, to allow the user to move it.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ToolBar.HasChevronedItems">
+            <summary>
+            Indicates whether some of the items in the toolbar have been moved from the main display due to lack of space.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ToolBar.SeparatorStyle">
+            <summary>
+            The style to apply to separators.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.TitleAligner">
+            <summary>
+            Provides window title alignment facilities.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TitleAligner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.Primitives.TitleAligner"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TitleAligner.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TitleAligner.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.MenuBar">
+            <summary>
+            Extends the standard toolbar with custom appearance and properties.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuBar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.MenuBar"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuBar.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ColorPicker">
+            <summary>
+            Provides a means of choosing from a range of colors.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ColorPicker.ShowGraduationsProperty">
+            <summary>
+            Identifies the ShowGraduations dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ColorPicker.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.ColorPicker"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ColorPicker.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ColorPicker.OnColorPicked(Divelements.SandRibbon.ColorEventArgs)">
+            <summary>
+            Raises the ColorPicked event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="E:Divelements.SandRibbon.ColorPicker.ColorPicked">
+            <summary>
+            Occurs when the user picks a color from the control.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ColorPicker.Colors">
+            <summary>
+            The collection of basic colors being displayed by the control.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ColorPicker.ShowGraduations">
+            <summary>
+            Indicates whether light and dark graduations of the colors are made available for selection.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ColorCollection">
+            <summary>
+            A collection of colors.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ColorCollection.ClearItems">
+            <summary>
+            Overridden. See the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ColorCollection.InsertItem(System.Int32,System.Windows.Media.Color)">
+            <summary>
+            Overridden. See the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ColorCollection.RemoveItem(System.Int32)">
+            <summary>
+            Overridden. See the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ClientPanel">
+            <summary>
+            Provides an attractive display for the main content of an application.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ClientPanel.#ctor">
+            <summary>
+            Initializes a new instance of the ClientPanel class.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ShufflePanel">
+            <summary>
+            Provides layout facilities for division into two lines under normal conditions, or three lines when space is tight.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ShufflePanel.CondensedChildOrderProperty">
+            <summary>
+            Identifies the CondensedChildOrder dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ShufflePanel.CondenseProperty">
+            <summary>
+            Identifies the Condense dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ShufflePanel.IsCondensedProperty">
+            <summary>
+            Identifies the IsCondensed dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ShufflePanel.ItemSpacingProperty">
+            <summary>
+            Identifies the ItemSpacing dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ShufflePanel.#ctor">
+            <summary>
+            Initializes a new instance of the VariableLinePanel class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ShufflePanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ShufflePanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ShufflePanel.ItemSpacing">
+            <summary>
+            The spacing to apply between items.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ShufflePanel.CondensedChildOrder">
+            <summary>
+            The order in which children are laid out when the panel is condensed.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ShufflePanel.IsCondensed">
+            <summary>
+            Indicates whether the panel is condensed.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.ShufflePanel.Condense">
+            <summary>
+            Indicates the threshold at which the panel becomes condensed.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Int32ArrayConverter">
+            <summary>
+            Provides a means to convert from a string representation of an Int32 array into the array.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Int32ArrayConverter.#ctor">
+            <summary>
+            Initializes a new instance of the Int32ArrayConverter class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Int32ArrayConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Int32ArrayConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.InteractionState">
+            <summary>
+            Specifies the interaction state for highlighting.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.InteractionState.Normal">
+            <summary>
+            The element is in a normal state.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.InteractionState.Hot">
+            <summary>
+            The element is in a highlighted state.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.InteractionState.Pushed">
+            <summary>
+            The element is in a pushed state.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.InteractionState.Checked">
+            <summary>
+            The element is in a checked state.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.InteractionState.Disabled">
+            <summary>
+            The element is in a disabled state.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.EditingContext">
+            <summary>
+            Represents a context in which a document can be edited.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.EditingContext.TextProperty">
+            <summary>
+            Identifies the Text dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.EditingContext.ColorProperty">
+            <summary>
+            Identifies the Color dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.EditingContext.IsAvailableProperty">
+            <summary>
+            Identifies the IsAvailable dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.EditingContext.TitleBarBrushProperty">
+            <summary>
+            Identifies the TitleBarBrush dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.EditingContext.ContrastColorProperty">
+            <summary>
+            Identifies the ContrastColor dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.EditingContext.GlowColorProperty">
+            <summary>
+            Identifies the GlowColor dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.EditingContext.#ctor">
+            <summary>
+            Initializes a new instance of the EditingContext class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.EditingContext.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden. See the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.EditingContext.OnIsAvailableChanged(System.EventArgs)">
+            <summary>
+            Raises the IsAvailableChanged event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.EditingContext.Activate(Divelements.SandRibbon.EditingContextActivateMode)">
+            <summary>
+            Activates the editing context.
+            </summary>
+            <param name="activateMode">The manner in which the editing context is activated.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.EditingContext.Deactivate">
+            <summary>
+            Deactivates the editing context.
+            </summary>
+        </member>
+        <member name="E:Divelements.SandRibbon.EditingContext.IsAvailableChanged">
+            <summary>
+            Occurs when the value of the IsAvailable property changes.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.EditingContext.SortKey">
+            <summary>
+            Determines where the editing context header is displayed relative to other headers.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.EditingContext.TitleBarBrush">
+            <summary>
+            The brush used to draw the background of the editing context in the window titlebar.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.EditingContext.IsAvailable">
+            <summary>
+            Indicates whether the editing context is available.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.EditingContext.Reference">
+            <summary>
+            A reference for the editing context.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.EditingContext.Ribbon">
+            <summary>
+            The ribbon that the editing context belongs to.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.EditingContext.Text">
+            <summary>
+            The text used to represent the editing context.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.EditingContext.Color">
+            <summary>
+            The color used to represent the editing context.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.EditingContext.ContrastColor">
+            <summary>
+            A companion color to be used by visual templates.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.EditingContext.GlowColor">
+            <summary>
+            A companion color to be used by visual templates.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.EditingContextCollection">
+            <summary>
+            A collection of editing contexts.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.EditingContextCollection.ClearItems">
+            <summary>
+            Overridden. See the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.EditingContextCollection.InsertItem(System.Int32,Divelements.SandRibbon.EditingContext)">
+            <summary>
+            Overridden. See the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.EditingContextCollection.RemoveItem(System.Int32)">
+            <summary>
+            Overridden. See the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.EditingContextCollection.Item(System.String)">
+            <summary>
+            Returns the editing context with the specified reference.
+            </summary>
+            <param name="reference">The reference to look for.</param>
+        </member>
+        <member name="T:Divelements.SandRibbon.MenuItem">
+            <summary>
+            Provides an activatable representation of a command.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.MenuItem.IsCheckedProperty">
+            <summary>
+            Identifies the IsChecked dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.MenuItem.ImageProperty">
+            <summary>
+            Identifies the Image dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.MenuItem.TextProperty">
+            <summary>
+            Identifies the Text dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.#ctor">
+            <summary>
+            Initializes a new instance of the MenuItem class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.OnContentChanged(System.Object,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.TriggerLivePreview">
+            <summary>
+            Triggers live preview for the control.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.OnActivate(Divelements.SandRibbon.ActivateEventArgs)">
+            <summary>
+            Raises the Activate event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.MenuItem.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.MenuItem.Popup">
+            <summary>
+            The popup associated with the button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.MenuItem.IsMouseOver">
+            <summary>
+            Indicates whether the mouse is hovering over the element.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.MenuItem.IsChecked">
+            <summary>
+            Indicates whether the menu item is checked.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.MenuItem.Image">
+            <summary>
+            The image associated with the menu item.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.MenuItem.Text">
+            <summary>
+            The text associated with the button.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Heading">
+            <summary>
+            Provides a graphical representation of a heading, suitable for display in popups.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Heading.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.Heading"/> class.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.RibbonGroupPanel">
+            <summary>
+            Provides dymanic layout facilities for ribbon groups.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.RibbonGroupPanel.AutoCollapseGroupsProperty">
+            <summary>
+            Identifies the AutoCollapseGroups dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.RibbonGroupPanel.#ctor">
+            <summary>
+            Initializes a new instance of the RibbonGroupPanel class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.RibbonGroupPanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.RibbonGroupPanel.AutoCollapseGroups">
+            <summary>
+            Indicates whether groups are automatically collapsed as space becomes tight.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.QuickAccessToolBar">
+            <summary>
+            A toolbar designed to be hosted inside a ribbon to give quick access to commonly-used commands.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.QuickAccessToolBar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.QuickAccessToolBar"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.QuickAccessToolBar.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.WrapPanel">
+            <summary>
+            Positions child elements in sequential position from left to right,
+            breaking content to the next line at the edge of the containing box.
+            Subsequent ordering happens sequentially from top to bottom or from
+            right to left, depending on the value of the Orientation property.
+            </summary>
+            <QualityBand>Stable</QualityBand>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.WrapPanel._ignorePropertyChange">
+            <summary>
+            A value indicating whether a dependency property change handler
+            should ignore the next change notification.  This is used to reset
+            the value of properties without performing any of the actions in
+            their change handlers.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.WrapPanel.ItemHeightProperty">
+            <summary>
+            Identifies the ItemHeight dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.WrapPanel.ItemWidthProperty">
+            <summary>
+            Identifies the ItemWidth dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.WrapPanel.OrientationProperty">
+            <summary>
+            Identifies the Orientation dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.WrapPanel.OnOrientationPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            OrientationProperty property changed handler.
+            </summary>
+            <param name="d">WrapPanel that changed its Orientation.</param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.WrapPanel.#ctor">
+            <summary>
+            Initializes a new instance of the WrapPanel class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.WrapPanel.OnItemHeightOrWidthPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Property changed handler for ItemHeight and ItemWidth.
+            </summary>
+            <param name="d">
+            WrapPanel that changed its ItemHeight or ItemWidth.
+            </param>
+            <param name="e">Event arguments.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.WrapPanel.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Measures the child elements of a WrapPanel in anticipation of 
+            arranging them during the ArrangeOverride pass.
+            </summary>
+            <param name="constraint">
+            An upper limit Size that should not be exceeded.
+            </param>
+            <returns>
+            Desired size of the WrapPanel and its child elements.
+            </returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.WrapPanel.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Arranges the content of a WrapPanel element.
+            </summary>
+            <param name="finalSize">
+            The Size that this element should use to arrange its child elements.
+            </param>
+            <returns>
+            The arranged size of this WrapPanel element and its children.
+            </returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.WrapPanel.ArrangeLine(System.Int32,System.Int32,System.Nullable{System.Double},System.Double,System.Double)">
+            <summary>
+            Arrange a sequence of elements in a single line.
+            </summary>
+            <param name="lineStart">
+            Index of the first element in the sequence to arrange.
+            </param>
+            <param name="lineEnd">
+            Index of the last element in the sequence to arrange.
+            </param>
+            <param name="directDelta">
+            Optional fixed growth in the primary direction.
+            </param>
+            <param name="indirectOffset">
+            Offset of the line in the indirect direction.
+            </param>
+            <param name="indirectGrowth">
+            Shared indirect growth of the elements on this line.
+            </param>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.WrapPanel.ItemHeight">
+            <summary>
+            Gets or sets the Double that represents the uniform height of all
+            items that are contained within the WrapPanel.  
+            </summary>
+            <remarks>
+            The default value is NaN.
+            </remarks>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.WrapPanel.ItemWidth">
+            <summary>
+            Gets or sets a Double that represents the uniform width of all items
+            that are contained within the WrapPanel.  
+            </summary>
+            <remarks>
+            The default value is NaN.
+            </remarks>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.WrapPanel.Orientation">
+            <summary>
+            Gets or sets a value that specifies the dimension in which 
+            child content is arranged.
+            </summary>
+            <remarks>
+            The default value is Horizontal.
+            </remarks>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.OrientedSize._orientation">
+            <summary>
+            The orientation of the structure.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.OrientedSize._direct">
+            <summary>
+            The size dimension that grows directly with layout placement.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.OrientedSize._indirect">
+            <summary>
+            The size dimension that grows indirectly with the maximum value of
+            the layout row or column.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.OrientedSize.#ctor(System.Windows.Controls.Orientation)">
+            <summary>
+            Initializes a new OrientedSize structure.
+            </summary>
+            <param name="orientation">Orientation of the structure.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.OrientedSize.#ctor(System.Windows.Controls.Orientation,System.Double,System.Double)">
+            <summary>
+            Initializes a new OrientedSize structure.
+            </summary>
+            <param name="orientation">Orientation of the structure.</param>
+            <param name="width">Un-oriented width of the structure.</param>
+            <param name="height">Un-oriented height of the structure.</param>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.OrientedSize.Orientation">
+            <summary>
+            Gets the orientation of the structure.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.OrientedSize.Direct">
+            <summary>
+            Gets or sets the size dimension that grows directly with layout
+            placement.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.OrientedSize.Indirect">
+            <summary>
+            Gets or sets the size dimension that grows indirectly with the
+            maximum value of the layout row or column.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.OrientedSize.Width">
+            <summary>
+            Gets or sets the width of the size.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.OrientedSize.Height">
+            <summary>
+            Gets or sets the height of the size.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.NumericExtensions">
+            <summary>
+            Numeric utility methods used by controls.  These methods are similar in
+            scope to the WPF DoubleUtil class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.NumericExtensions.IsZero(System.Double)">
+            <summary>
+            Check if a number is zero.
+            </summary>
+            <param name="value">The number to check.</param>
+            <returns>True if the number is zero, false otherwise.</returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.NumericExtensions.IsNaN(System.Double)">
+            <summary>
+            Check if a number isn't really a number.
+            </summary>
+            <param name="value">The number to check.</param>
+            <returns>
+            True if the number is not a number, false if it is a number.
+            </returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.NumericExtensions.IsGreaterThan(System.Double,System.Double)">
+            <summary>
+            Determine if one number is greater than another.
+            </summary>
+            <param name="left">First number.</param>
+            <param name="right">Second number.</param>
+            <returns>
+            True if the first number is greater than the second, false
+            otherwise.
+            </returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.NumericExtensions.IsLessThanOrClose(System.Double,System.Double)">
+            <summary>
+            Determine if one number is less than or close to another.
+            </summary>
+            <param name="left">First number.</param>
+            <param name="right">Second number.</param>
+            <returns>
+            True if the first number is less than or close to the second, false
+            otherwise.
+            </returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.NumericExtensions.AreClose(System.Double,System.Double)">
+            <summary>
+            Determine if two numbers are close in value.
+            </summary>
+            <param name="left">First number.</param>
+            <param name="right">Second number.</param>
+            <returns>
+            True if the first number is close in value to the second, false
+            otherwise.
+            </returns>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.NumericExtensions.NanUnion">
+            <summary>
+            NanUnion is a C++ style type union used for efficiently converting
+            a double into an unsigned long, whose bits can be easily
+            manipulated.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.NumericExtensions.NanUnion.FloatingValue">
+            <summary>
+            Floating point representation of the union.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.NumericExtensions.NanUnion.IntegerValue">
+            <summary>
+            Integer representation of the union.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.TabStrip">
+            <summary>
+            Provides layout and decoration facilities for tabs.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.TabStrip.DividerBrushProperty">
+            <summary>
+            Identifies the DividerBrush dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TabStrip.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.Primitives.TabStrip"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TabStrip.ArrangeOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.TabStrip.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.TabStrip.DividerBrush">
+            <summary>
+            The brush used to paint dividers.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.DropShadow">
+            <summary>
+            Provides a visual drop shadow behind the content displayed in the control.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.DropShadow.ShadowColorProperty">
+            <summary>
+            Identifies the ShadowColor dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.DropShadow.ShadowSizeProperty">
+            <summary>
+            Identifies the ShadowSize dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.DropShadow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="!:Divelements.SandDock.Primitives.DropShadow"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.DropShadow.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.DropShadow.ShadowColor">
+            <summary>
+            The color of the shadow.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.DropShadow.ShadowSize">
+            <summary>
+            The size of the shadow.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.GalleryButton">
+            <summary>
+            A button for display in a gallery.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.GalleryButton.#ctor">
+            <summary>
+            Initializes a new instance of the GalleryButton class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.GalleryButton.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.GalleryButton.TriggerLivePreview">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.RibbonGroup">
+            <summary>
+            Represents a group of ribbon controls with similar functionality.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGroup.ActiveVariantProperty">
+            <summary>
+            Identifies the ActiveVariant dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGroup.HeaderProperty">
+            <summary>
+            Identifies the Header dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGroup.ImageProperty">
+            <summary>
+            Identifies the Image dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGroup.ShowDialogLauncherProperty">
+            <summary>
+            Identifies the ShowDialogLauncher dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonGroup.SeparatorStyleProperty">
+            <summary>
+            Identifies the SeparatorStyle dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonGroup.#ctor">
+            <summary>
+            Initializes a new instance of the RibbonGroup class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonGroup.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonGroup.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonGroup.OnLaunchDialog(System.EventArgs)">
+            <summary>
+            Raises the LaunchDialog event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonGroup.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonGroup.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="E:Divelements.SandRibbon.RibbonGroup.LaunchDialog">
+            <summary>
+            Occurs when the user activates the dialog launcher button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGroup.ShowDialogLauncher">
+            <summary>
+            Indicates whether the dialog launcher button is shown.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGroup.Image">
+            <summary>
+            The image associated with the group.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGroup.Header">
+            <summary>
+            The header text to display for the group.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGroup.ActiveVariant">
+            <summary>
+            The active size variant of the group.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGroup.Variants">
+            <summary>
+            The collection of size variants that can be applied to the group.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonGroup.SeparatorStyle">
+            <summary>
+            The style to apply to separators.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.RibbonGroupChrome">
+            <summary>
+            Provides the user interface for displaying items within a ribbon group.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.RibbonGroupChrome.ShowDialogLauncherProperty">
+            <summary>
+            Identifies the ShowDialogLauncher dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.RibbonGroupChrome.HeaderProperty">
+            <summary>
+            Identifies the Header dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.RibbonGroupChrome.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.Primitives.RibbonGroupChrome"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.RibbonGroupChrome.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.RibbonGroupChrome.OnLaunchDialog(System.EventArgs)">
+            <summary>
+            Raises the LaunchDialog event.
+            </summary>
+            <param name="e">The arguments associated with the event.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.RibbonGroupChrome.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.RibbonGroupChrome.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="E:Divelements.SandRibbon.Primitives.RibbonGroupChrome.LaunchDialog">
+            <summary>
+            Occurs when the user activates the dialog launcher button.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.RibbonGroupChrome.IsCollapsed">
+            <summary>
+            Indicates whether the control displays a collapsed appearance.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.RibbonGroupChrome.IsPushed">
+            <summary>
+            Indicates whether the control displays a pushed appearance.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.RibbonGroupChrome.ShowDialogLauncher">
+            <summary>
+            Indicates whether the dialog launcher button is shown.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.RibbonGroupChrome.Header">
+            <summary>
+            The header text to display for the group.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.RibbonTab">
+            <summary>
+            Represents a section of the ribbon containing controls with a similar purpose.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonTab.TextProperty">
+            <summary>
+            Identifies the Text dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonTab.IsContextualProperty">
+            <summary>
+            Identifies the IsContextual dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonTab.EditingContextProperty">
+            <summary>
+            Identifies the EditingContext dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonTab.IsSelectedProperty">
+            <summary>
+            Identifies the IsSelected dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.RibbonTab.ContextualAppearanceProperty">
+            <summary>
+            Identifies the ContextualAppearance dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonTab.#ctor">
+            <summary>
+            Initializes a new instance of the RibbonTab class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonTab.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonTab.GetContainerForItemOverride">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.RibbonTab.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonTab.ContextualAppearance">
+            <summary>
+            How the tab colours itself when contextual.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonTab.EditingContextReference">
+            <summary>
+            If specified, indicates the editing context that must be active for this tab to be shown.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonTab.IsSelected">
+            <summary>
+            Indicates whether the tab is selected.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonTab.EditingContext">
+            <summary>
+            The editing context to which the tab belongs.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonTab.IsContextual">
+            <summary>
+            Indicates whether the tab is part of a contextual group.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.RibbonTab.Text">
+            <summary>
+            The text representing the tab.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.ContextPopup">
+            <summary>
+            An extended popup which allows association to framework elements.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.ContextPopup.PopupProperty">
+            <summary>
+            Identifies the Popup attached property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ContextPopup.#ctor">
+            <summary>
+            Initializes a new instance of the ContextPopup class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ContextPopup.Show(System.Windows.FrameworkElement,System.Windows.Rect)">
+            <summary>
+            Shows the popup over the specified element and justified around the specified rectangle.
+            </summary>
+            <param name="justifyParent">The element over which to show the popup.</param>
+            <param name="justifyRect">The rectangle around which to justify the popup.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.ContextPopup.OnClosed(System.EventArgs)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.ContextPopup.SetPopup(System.Windows.FrameworkElement,Divelements.SandRibbon.ContextPopup)">
+            <summary>
+            Sets the value of the Popup property for the specified element.
+            </summary>
+            <param name="element">The element for which to set the property value.</param>
+            <param name="value">The new value of the property.</param>
+        </member>
+        <member name="M:Divelements.SandRibbon.ContextPopup.GetPopup(System.Windows.FrameworkElement)">
+            <summary>
+            Obtains the value of the Popup property for the specified element.
+            </summary>
+            <param name="element">The element for which to obtain the property value.</param>
+            <returns>The value of the property.</returns>
+        </member>
+        <member name="M:Divelements.SandRibbon.ColorUtility.AdjustColorBrightness(System.Windows.Media.Color,System.Int32)">
+            <summary>
+            Adjusts the brightness of a color.
+            </summary>
+            <param name="baseColor">The color to start with.</param>
+            <param name="factor">The factor, from -255 to 255, to adjust the color by.</param>
+            <returns>The new color.</returns>
+        </member>
+        <member name="T:Divelements.SandRibbon.Hsv">
+            <summary>
+            A structure representing the Hue, Saturation and Value of a color.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Hsv.Hue">
+            <summary>
+            The hue of the color.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Hsv.Saturation">
+            <summary>
+            The saturation of the color.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Hsv.Value">
+            <summary>
+            The value of the color.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Hsv.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the Hsv structure.
+            </summary>
+            <param name="hue">The initial value of the Hue field.</param>
+            <param name="saturation">The initial value of the Saturation field.</param>
+            <param name="value">The initial value of the Value field.</param>
+        </member>
+        <member name="T:Divelements.SandRibbon.Primitives.PagingScrollViewer">
+            <summary>
+            Provides page-by-page scrolling of child controls.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.PagingScrollViewer.ScrollViewerStyleProperty">
+            <summary>
+            Identifies the ScrollViewerStyle dependency property.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.Primitives.PagingScrollViewer.OrientationProperty">
+            <summary>
+            Identifies the Orientation dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.PagingScrollViewer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.Primitives.PagingScrollViewer"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.PagingScrollViewer.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.Primitives.PagingScrollViewer.OnApplyTemplate">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.PagingScrollViewer.Orientation">
+            <summary>
+            The orientation of the scrolling.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.Primitives.PagingScrollViewer.ScrollViewerStyle">
+            <summary>
+            The style to apply to the embedded ScrollViewer.
+            </summary>
+        </member>
+        <member name="T:Divelements.SandRibbon.StatusBar">
+            <summary>
+            Provides a visually distinct area for application status to be displayed.
+            </summary>
+        </member>
+        <member name="F:Divelements.SandRibbon.StatusBar.SeparatorStyleProperty">
+            <summary>
+            Identifies the SeparatorStyle dependency property.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.StatusBar.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Divelements.SandRibbon.StatusBar"/> class.
+            </summary>
+        </member>
+        <member name="M:Divelements.SandRibbon.StatusBar.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Overridden. Consult the documentation on the base class for help on this member.
+            </summary>
+        </member>
+        <member name="P:Divelements.SandRibbon.StatusBar.SeparatorStyle">
+            <summary>
+            The style to apply to separators.
+            </summary>
+        </member>
+    </members>
+</doc>

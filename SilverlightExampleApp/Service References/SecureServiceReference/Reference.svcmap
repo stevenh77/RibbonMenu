@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7ff7d879-1097-4c9b-9677-2b2b6d96b4c9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1233/Secure/SecureService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SecureService.wsdl" MetadataType="Wsdl" ID="e19da202-1701-4290-b843-209c1576abce" SourceId="1" SourceUrl="http://localhost:1233/Secure/SecureService.svc?wsdl" />
+    <MetadataFile FileName="SecureService1.wsdl" MetadataType="Wsdl" ID="253291e7-deaa-4a29-8dc0-9ba797f108e3" SourceId="1" SourceUrl="http://localhost:1233/Secure/SecureService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SecureService.disco" MetadataType="Disco" ID="d1e8f597-956a-4e2b-b4b5-75d92c481a21" SourceId="1" SourceUrl="http://localhost:1233/Secure/SecureService.svc?disco" />
+    <MetadataFile FileName="SecureService.xsd" MetadataType="Schema" ID="67b1a775-3089-4a49-baa3-ffca00e7b580" SourceId="1" SourceUrl="http://localhost:1233/Secure/SecureService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

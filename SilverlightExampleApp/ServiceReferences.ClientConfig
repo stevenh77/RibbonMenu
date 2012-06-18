@@ -1,0 +1,32 @@
+<configuration>
+    <system.serviceModel>
+        <bindings>
+            <customBinding>
+                <binding name="CustomBinding_AuthenticationService">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="CustomBinding_SecureService">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+                <binding name="CustomBinding_ClientDataService">
+                    <binaryMessageEncoding />
+                    <httpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+                </binding>
+            </customBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:1233/Services/AuthenticationService.svc"
+                binding="customBinding" bindingConfiguration="CustomBinding_AuthenticationService"
+                contract="AuthenticationServiceReference.AuthenticationService"
+                name="CustomBinding_AuthenticationService" />
+            <endpoint address="http://localhost:1233/Secure/SecureService.svc"
+                binding="customBinding" bindingConfiguration="CustomBinding_SecureService"
+                contract="SecureServiceReference.SecureService" name="CustomBinding_SecureService" />
+            <endpoint address="http://localhost:1233/Secure/ClientDataService.svc"
+                binding="customBinding" bindingConfiguration="CustomBinding_ClientDataService"
+                contract="ClientDataServiceReference.ClientDataService" name="CustomBinding_ClientDataService" />
+        </client>
+    </system.serviceModel>
+</configuration>

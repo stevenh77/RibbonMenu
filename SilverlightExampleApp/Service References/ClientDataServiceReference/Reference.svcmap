@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d4a1f251-d7c2-41a6-8db5-0eb2bf465743" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1233/Secure/ClientDataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ClientDataService.disco" MetadataType="Disco" ID="9259e688-1d32-4b89-bb58-70ba280f941e" SourceId="1" SourceUrl="http://localhost:1233/Secure/ClientDataService.svc?disco" />
+    <MetadataFile FileName="ClientDataService.xsd" MetadataType="Schema" ID="3830832d-7a24-489c-90b4-728b3ff7756b" SourceId="1" SourceUrl="http://localhost:1233/Secure/ClientDataService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ClientDataService1.xsd" MetadataType="Schema" ID="c113db26-26d5-4ae7-a8f0-5ac41515985c" SourceId="1" SourceUrl="http://localhost:1233/Secure/ClientDataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ClientDataService2.xsd" MetadataType="Schema" ID="c2be23f4-e351-49da-8ce5-0561ad38188d" SourceId="1" SourceUrl="http://localhost:1233/Secure/ClientDataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ClientDataService.wsdl" MetadataType="Wsdl" ID="9b47eeb8-f66b-429f-b2ca-d76596c95d1e" SourceId="1" SourceUrl="http://localhost:1233/Secure/ClientDataService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ClientDataService1.wsdl" MetadataType="Wsdl" ID="6e60b3c5-2917-4ff2-9948-103361a6ebd6" SourceId="1" SourceUrl="http://localhost:1233/Secure/ClientDataService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

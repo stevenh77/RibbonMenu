@@ -1,0 +1,44 @@
+﻿<navigation:Page x:Class="SilverlightExampleApp.Views.MainPage" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
+           xmlns:Views="clr-namespace:SilverbladeDemo.Views" 
+           d:DesignWidth="800" 
+           d:DesignHeight="400"
+           Title="Silverblade">
+  
+    <Grid x:Name="LayoutRoot">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="auto" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="25" />
+      </Grid.RowDefinitions>
+
+      <Border Grid.Row="0">
+        <Views:Ribbon />
+      </Border>
+
+      <Border x:Name="ContentBorder" Grid.Row="1">
+
+      <navigation:Frame x:Name="ContentFrame"
+                        Source="/Views/ClientSearch.xaml"
+                        Navigated="ContentFrame_Navigated"
+                        NavigationFailed="ContentFrame_NavigationFailed"/>
+    </Border>
+
+      <Grid Grid.Row="2" Background="Gainsboro">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="250" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="txtStatusBar"
+                  Grid.Column="0"
+                   Margin="5,5,0,0"
+                   Foreground="#FF3E3E3E"
+                  Text="Ready" />
+      </Grid>
+    </Grid>
+</navigation:Page>
